@@ -124,11 +124,11 @@ export function format(payload) {
     : "<p>ไม่มีรายละเอียดเพิ่มเติม</p>";
 
   const html = [
-    '<h1><b>' + escapeHtml(deviceName) + " &bull; " + '<span style="color:' + (eventType === "Trip Lockout" ? "red" : "orange") + ';">' + escapeHtml(eventType) + "</span></b></h1>",
+    '<h3><b>' + escapeHtml(deviceName) + " &bull; " + '<span style="color:' + (eventType === "Trip Lockout" ? "red" : "orange") + ';">' + escapeHtml(eventType) + "</span></b></h3>",
     "<p><b>ข้อมูลเหตุการณ์</b></p>",
     metadata,
-    // "<p><b>Fault Analysis</b></p>",
-    // faultAnalysis,
+    "<p><b>Fault Analysis</b></p>",
+    faultAnalysis,
     "<p><b>รายละเอียดเหตุการณ์ (TDMS)</b></p>",
     tdmsTable
   ].join("");
