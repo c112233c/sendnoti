@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ghcr.io/c112233c/sendnoti-be
-  tag: "pending"
+  tag: "sha-b421d58a0c295fbc3ae508b5b14c1db12bcd8bee"
   pullPolicy: Always
   pullSecrets: []
 
