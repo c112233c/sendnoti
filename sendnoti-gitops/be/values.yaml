@@ -1,0 +1,29 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/c112233c/sendnoti-be
+  tag: "pending"
+  pullPolicy: Always
+  pullSecrets: []
+
+service:
+  type: NodePort
+  port: 3333
+  nodePort: 30090
+
+containerPort: 3333
+
+env:
+  NODE_ENV: production
+  HOST: "0.0.0.0"
+  PORT: "3333"
+
+existingSecret: sendnoti-be-30090-secret
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sendnoti-be-30090
+  namespace: boat
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: sendnoti-be-30090
+  ports:
+    - name: http
+      port: {{ .Values.service.port }}
+      targetPort: http
+      nodePort: {{ .Values.service.nodePort }}
+      protocol: TCP
