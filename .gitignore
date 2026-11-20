@@ -1,0 +1,13 @@
+# Node.js
+node_modules/
+npm-debug.log*
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local tooling
+.DS_Store
+Thumbs.db
